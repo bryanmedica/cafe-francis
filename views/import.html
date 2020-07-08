@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Café Francis</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/import.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/javascripts/import.js"></script>
+    <link rel="icon" type="image/ico" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="securityContainer">
+        <div class="menuImporterContainer">
+          <h1>Importez la suggestion</h1>
+          <button id="uploadBtn">Importer</button>
+          <form action="/import" method="post" enctype="multipart/form-data">
+            <input id="uploadFile" type="file" accept="image/*" name="photo">
+            <input id="submit" type="submit" name="submit">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

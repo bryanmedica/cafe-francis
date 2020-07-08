@@ -1,0 +1,40 @@
+
+#root {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 80vh;
+}
+
+.menuImporterContainer {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+input[type=file] {
+    display: none;
+}
+
+button {
+    background-color: #207bf1;
+    border: #207bf1 2px solid;
+    border-radius: 2px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: large;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline-width: 0px;
+}
+
+input[type=submit] {
+    display: none;
+}

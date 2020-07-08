@@ -1,7 +1,3 @@
-html {
-    background-color: #282c34;
-}
-
 #root {
     display: flex;
     justify-content:center;
@@ -15,7 +11,7 @@ html {
     font-size: larger;
 }
 
-button {
+input[type=submit] {
     background-color: #207bf1;
     border: #207bf1 2px solid;
     border-radius: 2px;
@@ -26,7 +22,7 @@ button {
     margin-top: 20px;
 }
 
-button:hover {
+input[type=submit]:hover {
     cursor: pointer;
 }
 

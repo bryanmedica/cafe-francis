@@ -1,0 +1,16 @@
+html {
+    background-color: #A99078;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.menuContainer {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
