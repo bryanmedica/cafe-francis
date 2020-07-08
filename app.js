@@ -31,6 +31,7 @@ var storage = multer.diskStorage({
 var upload = multer({
   storage : storage
 });
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -40,6 +41,14 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.send('error');
+});
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header("Access-Control-Allow-Headers","*");
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  next();
 });
 
 app.get('/', function(req, res, next) {
@@ -55,8 +64,12 @@ app.get('/import', function(req, res, next) {
 });
 
 app.post('/password', upload.none(), function(req, res) {
-  console.log(req.body.password);
-  res.redirect("/import");
+  if (req.body.password === security.password) {
+    res.cookie();
+    res.redirect("/import");
+  } else {
+    res.redirect("/");
+  }
 });
 
 app.post('/import', upload.single('photo'), function(req, res) {
