@@ -1,0 +1,50 @@
+html {
+    background-color: #282c34;
+}
+
+#root {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 80vh;
+}
+
+.securityContainer {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+button {
+    background-color: #207bf1;
+    border: #207bf1 2px solid;
+    border-radius: 2px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: large;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type=password] {
+    background: transparent;
+    border: white 2px solid;
+    border-radius: 2px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: large;
+}
+
+input[type=password]:hover {
+    border: 2px solid #207bf1;
+}
+
+input[type=password]:focus {
+    border: 2px solid #207bf1;
+    outline-width: 0;
+}
